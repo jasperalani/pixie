@@ -1,0 +1,199 @@
+// VARIABLES
+
+$large: 2rem;
+$medium: 1.5rem;
+$small: 1rem;
+$extra-small: 0.5rem;
+
+$corner-id: 11.25px;
+
+// GLOBAL
+
+.hcp {
+  cursor: pointer;
+}
+
+.hcp:hover {
+  font-weight: lighter;
+}
+
+// PAGES
+
+#container {
+  margin: 20%;
+
+  .hover:hover {
+    color: coral;
+    cursor: pointer;
+  }
+
+  a {
+    color: black;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+#page, #page-info {
+
+  padding-top: 30px;
+
+  #image {
+    margin: 2%;
+
+    img {
+      width: 500px;
+    }
+  }
+
+  #restart {
+    position: fixed;
+    top: 5px;
+    left: 10px;
+    font-style: italic;
+    color: black;
+  }
+
+  #restart:hover {
+    font-weight: lighter;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  #sidebar {
+    margin: 30px;
+    font-size: 2rem;
+    position: fixed;
+  }
+
+  #sidebar .small {
+    font-size: 1.5rem;
+    font-style: italic;
+  }
+
+  #center-wrapper {
+    width: 80%;
+    height: auto;
+    margin: auto;
+    background: black;
+    text-align: center;
+    color: white;
+
+    header {
+      padding: 50px;
+      background: blue;
+
+      .header-title {
+        color: white;
+      }
+
+    }
+
+    #nav-menu {
+      padding: 15px;
+      background: rgba(0, 0, 0, 0.1);
+
+      nav {
+        padding: 10px;
+
+        p {
+          display: inline;
+          margin-left: 10%;
+          margin-right: 10%;
+          font-size: 1.2rem;
+
+        }
+
+        p:hover {
+          cursor: pointer;
+        }
+      }
+
+    }
+
+    /* FLOATING CONTAINER FC1 F! */
+
+    .container {
+      margin: auto;
+      max-width: none !important;
+      padding: 15px;
+
+      .white {
+        padding: 30px;
+
+        .block-element {
+          margin: auto;
+          max-width: max-content;
+          min-height: max-content;
+          color: lightblue;
+          background: rgb(253, 255, 224); //#FFDFC1;
+          position: relative;
+          padding-left: 0;
+          padding-right: 0;
+
+          .top-wrapper {
+            padding: 5%;
+            padding-bottom: 2%;
+
+            p {
+              font-size: 0.8rem;
+              margin-bottom: 5px;
+              font-style: italic;
+              text-shadow: 1px 1px aliceblue;
+            }
+
+            input {
+              border: black;
+              padding: 4px;
+            }
+
+            input:focus {
+              outline-width: 0;
+            }
+
+            .yvu-submit {
+              padding: 1%;
+              width: 10px;
+              height: 10px;
+              margin: auto;
+              position: absolute;
+              background-color: bisque;
+            }
+          }
+
+          .empty-container {
+            min-width: 600px;
+            min-height: 40px;
+          }
+        }
+
+        #ytplayer {
+          min-width: fit-content;
+          min-height: fit-content;
+          margin: 5px;
+        }
+
+        .corner-id {
+          left: 0;
+          top: 0;
+          position: absolute;
+          font-style: italic;
+          padding: 2px 0 0 5px;
+          font-size: $corner-id;
+        }
+
+
+      }
+
+    }
+
+  }
+
+  footer {
+    border: 1px solid gold;
+    padding: 1%;
+  }
+
+}

@@ -1,0 +1,116 @@
+.hcp {
+  cursor: pointer; }
+
+.hcp:hover {
+  font-weight: lighter; }
+
+#container {
+  margin: 20%; }
+  #container .hover:hover {
+    color: coral;
+    cursor: pointer; }
+  #container a {
+    color: black; }
+  #container a:hover {
+    text-decoration: none; }
+
+#page, #page-info {
+  padding-top: 30px; }
+  #page #image, #page-info #image {
+    margin: 2%; }
+    #page #image img, #page-info #image img {
+      width: 500px; }
+  #page #restart, #page-info #restart {
+    position: fixed;
+    top: 5px;
+    left: 10px;
+    font-style: italic;
+    color: black; }
+  #page #restart:hover, #page-info #restart:hover {
+    font-weight: lighter;
+    cursor: pointer;
+    text-decoration: none; }
+  #page #sidebar, #page-info #sidebar {
+    margin: 30px;
+    font-size: 2rem;
+    position: fixed; }
+  #page #sidebar .small, #page-info #sidebar .small {
+    font-size: 1.5rem;
+    font-style: italic; }
+  #page #center-wrapper, #page-info #center-wrapper {
+    width: 80%;
+    height: auto;
+    margin: auto;
+    background: black;
+    text-align: center;
+    color: white;
+    /* FLOATING CONTAINER FC1 F! */ }
+    #page #center-wrapper header, #page-info #center-wrapper header {
+      padding: 50px;
+      background: blue; }
+      #page #center-wrapper header .header-title, #page-info #center-wrapper header .header-title {
+        color: white; }
+    #page #center-wrapper #nav-menu, #page-info #center-wrapper #nav-menu {
+      padding: 15px;
+      background: rgba(0, 0, 0, 0.1); }
+      #page #center-wrapper #nav-menu nav, #page-info #center-wrapper #nav-menu nav {
+        padding: 10px; }
+        #page #center-wrapper #nav-menu nav p, #page-info #center-wrapper #nav-menu nav p {
+          display: inline;
+          margin-left: 10%;
+          margin-right: 10%;
+          font-size: 1.2rem; }
+        #page #center-wrapper #nav-menu nav p:hover, #page-info #center-wrapper #nav-menu nav p:hover {
+          cursor: pointer; }
+    #page #center-wrapper .container, #page-info #center-wrapper .container {
+      margin: auto;
+      max-width: none !important;
+      padding: 15px; }
+      #page #center-wrapper .container .white, #page-info #center-wrapper .container .white {
+        padding: 30px; }
+        #page #center-wrapper .container .white .block-element, #page-info #center-wrapper .container .white .block-element {
+          margin: auto;
+          max-width: max-content;
+          min-height: max-content;
+          color: lightblue;
+          background: #fdffe0;
+          position: relative;
+          padding-left: 0;
+          padding-right: 0; }
+          #page #center-wrapper .container .white .block-element .top-wrapper, #page-info #center-wrapper .container .white .block-element .top-wrapper {
+            padding: 5%;
+            padding-bottom: 2%; }
+            #page #center-wrapper .container .white .block-element .top-wrapper p, #page-info #center-wrapper .container .white .block-element .top-wrapper p {
+              font-size: 0.8rem;
+              margin-bottom: 5px;
+              font-style: italic;
+              text-shadow: 1px 1px aliceblue; }
+            #page #center-wrapper .container .white .block-element .top-wrapper input, #page-info #center-wrapper .container .white .block-element .top-wrapper input {
+              border: black;
+              padding: 4px; }
+            #page #center-wrapper .container .white .block-element .top-wrapper input:focus, #page-info #center-wrapper .container .white .block-element .top-wrapper input:focus {
+              outline-width: 0; }
+            #page #center-wrapper .container .white .block-element .top-wrapper .yvu-submit, #page-info #center-wrapper .container .white .block-element .top-wrapper .yvu-submit {
+              padding: 1%;
+              width: 10px;
+              height: 10px;
+              margin: auto;
+              position: absolute;
+              background-color: bisque; }
+          #page #center-wrapper .container .white .block-element .empty-container, #page-info #center-wrapper .container .white .block-element .empty-container {
+            min-width: 600px;
+            min-height: 40px; }
+        #page #center-wrapper .container .white #ytplayer, #page-info #center-wrapper .container .white #ytplayer {
+          min-width: fit-content;
+          min-height: fit-content;
+          margin: 5px; }
+        #page #center-wrapper .container .white .corner-id, #page-info #center-wrapper .container .white .corner-id {
+          left: 0;
+          top: 0;
+          position: absolute;
+          font-style: italic;
+          padding: 2px 0 0 5px;
+          font-size: 11.25px; }
+  #page footer, #page-info footer {
+    border: 1px solid gold;
+    padding: 1%; }
