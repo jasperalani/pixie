@@ -2,7 +2,15 @@ $( document ).ready(function() {
     console.log( "ready!" );
 });
 
-function infopage() {
+function numbers(){
+    window.location.href = "?diffsel";
+}
+
+function alphabet(){
+    window.location.href = "?";
+}
+
+function misc() {
     window.location.href = "?infopage";
 }
 
@@ -12,11 +20,11 @@ function home() {
 }
 
 function asc(){
-    window.location.href = "?diff=" + $_GET['diff'] + "&order=asc";
+    window.location.href = "?numbers&diff=" + $_GET['diff'] + "&order=asc&plus=" + $_GET['plus'];
 }
 
 function desc(){
-    window.location.href = "?diff=" + $_GET['diff'] + "&order=desc";
+    window.location.href = "?numbers&diff=" + $_GET['diff'] + "&order=desc&plus=" + $_GET['plus'];
 }
 
 const CSS_COLOR_NAMES = [
@@ -170,6 +178,10 @@ const CSS_COLOR_NAMES = [
     "YellowGreen",
 ];
 
+$( document ).ready(function() {
+    ranColours();
+});
+
 function ranColours(){
 
     let r1 = getRandomInt(0, CSS_COLOR_NAMES.length);
@@ -181,6 +193,8 @@ function ranColours(){
     document.getElementById("nav1").style.color = CSS_COLOR_NAMES[r1];
     document.getElementById("nav2").style.color = CSS_COLOR_NAMES[r2];
     document.getElementById("nav3").style.color = CSS_COLOR_NAMES[r3];
+
+    //TODO: make selected table color opaque
 
 }
 

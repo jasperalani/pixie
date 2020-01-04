@@ -68,7 +68,9 @@
       padding: 15px; }
       #page #center-wrapper .container .white, #page-info #center-wrapper .container .white {
         padding: 30px; }
-        #page #center-wrapper .container .white .block-element, #page-info #center-wrapper .container .white .block-element {
+      #page #center-wrapper .container .row, #page-info #center-wrapper .container .row {
+        margin-bottom: 30px; }
+        #page #center-wrapper .container .row .block-element, #page-info #center-wrapper .container .row .block-element {
           margin: auto;
           max-width: max-content;
           min-height: max-content;
@@ -77,34 +79,35 @@
           position: relative;
           padding-left: 0;
           padding-right: 0; }
-          #page #center-wrapper .container .white .block-element .top-wrapper, #page-info #center-wrapper .container .white .block-element .top-wrapper {
-            padding: 5%;
-            padding-bottom: 2%; }
-            #page #center-wrapper .container .white .block-element .top-wrapper p, #page-info #center-wrapper .container .white .block-element .top-wrapper p {
+          #page #center-wrapper .container .row .block-element #win, #page-info #center-wrapper .container .row .block-element #win {
+            color: #a0e0e6; }
+          #page #center-wrapper .container .row .block-element .container-title, #page-info #center-wrapper .container .row .block-element .container-title {
+            padding: 5% 0 2% 0; }
+            #page #center-wrapper .container .row .block-element .container-title p, #page-info #center-wrapper .container .row .block-element .container-title p {
               font-size: 0.8rem;
               margin-bottom: 5px;
               font-style: italic;
               text-shadow: 1px 1px aliceblue; }
-            #page #center-wrapper .container .white .block-element .top-wrapper input, #page-info #center-wrapper .container .white .block-element .top-wrapper input {
+            #page #center-wrapper .container .row .block-element .container-title input, #page-info #center-wrapper .container .row .block-element .container-title input {
               border: black;
               padding: 4px; }
-            #page #center-wrapper .container .white .block-element .top-wrapper input:focus, #page-info #center-wrapper .container .white .block-element .top-wrapper input:focus {
+            #page #center-wrapper .container .row .block-element .container-title input:focus, #page-info #center-wrapper .container .row .block-element .container-title input:focus {
               outline-width: 0; }
-            #page #center-wrapper .container .white .block-element .top-wrapper .yvu-submit, #page-info #center-wrapper .container .white .block-element .top-wrapper .yvu-submit {
+            #page #center-wrapper .container .row .block-element .container-title .yvu-submit, #page-info #center-wrapper .container .row .block-element .container-title .yvu-submit {
               padding: 1%;
               width: 10px;
               height: 10px;
               margin: auto;
               position: absolute;
               background-color: bisque; }
-          #page #center-wrapper .container .white .block-element .empty-container, #page-info #center-wrapper .container .white .block-element .empty-container {
+          #page #center-wrapper .container .row .block-element .empty-container, #page-info #center-wrapper .container .row .block-element .empty-container {
             min-width: 600px;
             min-height: 40px; }
-        #page #center-wrapper .container .white #ytplayer, #page-info #center-wrapper .container .white #ytplayer {
+        #page #center-wrapper .container .row #ytplayer, #page-info #center-wrapper .container .row #ytplayer {
           min-width: fit-content;
           min-height: fit-content;
           margin: 5px; }
-        #page #center-wrapper .container .white .corner-id, #page-info #center-wrapper .container .white .corner-id {
+        #page #center-wrapper .container .row .corner-id, #page-info #center-wrapper .container .row .corner-id {
           left: 0;
           top: 0;
           position: absolute;

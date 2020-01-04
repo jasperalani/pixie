@@ -9,9 +9,9 @@ include('includes.php');
 
 if (isset($_GET['infopage'])) {
 
-    include('infopage.php');
+    include('src/misc.php');
 
-} else if (isset($_GET['diff'])) {
+} else if (isset($_GET['numbers'])) {
 
     include('src/numbers.php');
 

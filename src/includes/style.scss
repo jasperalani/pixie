@@ -122,6 +122,10 @@ $corner-id: 11.25px;
 
       .white {
         padding: 30px;
+      }
+
+      .row {
+        margin-bottom: 30px;
 
         .block-element {
           margin: auto;
@@ -133,9 +137,12 @@ $corner-id: 11.25px;
           padding-left: 0;
           padding-right: 0;
 
-          .top-wrapper {
-            padding: 5%;
-            padding-bottom: 2%;
+          #win {
+            color: #a0e0e6;
+          }
+
+          .container-title {
+            padding: 5% 0 2% 0;
 
             p {
               font-size: 0.8rem;

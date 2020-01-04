@@ -23,7 +23,7 @@ function reverseNumber($num, $min, $max)
 
 //
 
-function get_header($title = 'Header'){
+function getHeader($title = 'Storm the Pixie'){
     echo '<header>';
     echo "<h2 class='header-title'><span>$title</span></h2>";
     echo '</header><body>';
@@ -63,9 +63,9 @@ function getNav()
 {
     echo '<div id="nav-menu">';
     echo '<nav>';
-    echo '<p id="nav1">numbers</p>';
-    echo '<p id="nav2">alphabet</p>';
-    echo '<p id="nav3" onclick="infopage()">misc</p>';
+    echo '<p id="nav1" onclick="numbers()">numbers</p>';
+    echo '<p id="nav2" onclick="alphabet()">alphabet</p>';
+    echo '<p id="nav3" onclick="misc()">misc</p>';
     echo '</nav>';
     echo '</div>';
 }

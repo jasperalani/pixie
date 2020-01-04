@@ -3,36 +3,30 @@
     <?php
 
 
-    /*
-     * GLOBALS
-     */
-
     global $difficulty;
-    global $YouTubeVideoURL;
-
-    /*
-     *  GET
-     */
 
     $difficulty = $_GET['diff'] ? $_GET['diff'] : 'easy';
 
     $difficulty_ = [
-        'easy' => 2,
-        'medium' => 5,
-        'hard' => 10
+        'easy' => 5,
+        'medium' => 10,
+        'hard' => 20
     ];
 
 
     ## Options
-    $items = 10;
-    //$items = 10 * $difficulty_[$difficulty];
+    //$items = 3;
+    $items = $difficulty_[$difficulty];
     $order = 1; // 0 = Descending , 1 = Ascending
-    $blocks_per_line = 1;
+    $blocks_per_line = 5;
     $random = false;
     $block_id = 0;
-    $YouTubeVideoURL = [false, "yXAKijc1Vmc"];
-    $autoplay = 0;
 
+    if(isset($_GET['plus'])){
+        if($_GET['plus'] !== ''){
+            $items = $items + intval($_GET['plus']);
+        }
+    }
 
     if (isset($_GET['order'])) {
         switch ($_GET['order']) {
@@ -57,8 +51,6 @@
 
 <!--START HTML-->
 
-<body onload="ranColours()">
-
 <div id="page">
 
     <a id="restart" href="?diffsel">restart</a>
@@ -70,11 +62,14 @@
 
     <div id="center-wrapper">
 
-        <?php get_header('Storm the Pixie'); echo getNav(); ?>
+        <?php
+        getHeader();
+        getNav();
+        $win = rand(1, sizeof($blocks));
+        ?>
 
         <div class="container">
-
-
+            <div class="row">
 
                 <?php
 
@@ -84,64 +79,56 @@
                     $NewBlocks[$i] = $blocks[sizeof($blocks) - $i - 1];
                 }
 
-                function devURL($url)
-                {
-                    if ($url[0] === true) {
-                        return $url[1];
-                    } else {
-                        $yvid = explode("=", $_POST["yvu1"]);
-                        return $yvid[1];
-                    }
-                }
+                foreach ($blocks
 
-                foreach ($blocks as $key => $block) {
+                         as $key => $block) {
                     if ($order == 0) {
                         $y = $random ? rand($NewBlocks[$key]->content, $NewBlocks[$key]->content * -$key) : $NewBlocks[$key]->content;
                     } else {
                         $y = $random ? rand($block->content, $block->content * $key) : $block->content;
                     }
 
-                    $b = mt_rand(100000, 999999);
-
-
                     ?>
 
-            <div class="row white">
                     <div class="col-sm block-element">
-                        <p class="corner-id"><?= strval($b) ?></p>
-
-                        <div class="top-wrapper">
-                            <p>youtube video url</p>
-                            <form action="" method="post">
-                                <input type="text" name="yvu<?= $key + 1 ?>">
-                                <input type="submit" class="yvu-submit">
-                            </form>
-                        </div>
-
                         <?php
+                        if($win == $key+1){
+                            $string = '';
+                            $c = 0;
+                            foreach($_GET as $gkey => $get){
+                                $c++;
+                                if($c > 1){
+                                    $string .= "&";
+                                }
+                                $string .= $gkey;
 
-                        if (isset($_POST["yvu1"])) {
+                                if($gkey == 'plus'){
+                                    if($get !== 'undefined'){
+                                        $old = intval($get);
+                                        $new = $old+5;
+                                        $get = strval($new);
+                                    }else{
+                                        $get = '5';
+                                    }
+                                }
 
-                            ?>
+                                if($get != ''){
+                                    $string .= "=" . $get;
+                                }
 
-                            <iframe id="ytplayer" type="text/html" width="640" height="360"
-                                    src="https://www.youtube.com/embed/<?= devURL($YouTubeVideoURL) ?>?autoplay=<?= $autoplay ?>&amp;" <!-- origin=http://example.com -->
-                                    frameborder="0"></iframe>
-
-                            <?php
-                        } else {
-
-                            ?>
-
-
-                            <div class="empty-container"></div>
-
-                            <?php
+                            }
+                            echo '<a href="?' . $string . '" id="win">';
                         }
-
                         ?>
 
+                        <!-- <p class="corner-id">--><?//= strval(mt_rand(100000, 999999)) ?><!-- </p> -->
+                        <p class="corner-id"><?= $y ?></p>
 
+                        <?php
+                        if($win == $key+1){
+                            echo '</a>';
+                        }
+                        ?>
                     </div>
 
                     <?php
@@ -159,11 +146,13 @@
             <?php
 
             footer();
+
             ?>
 
         </div>
 
     </div>
 </div>
+
 <?php
 endHTML();
