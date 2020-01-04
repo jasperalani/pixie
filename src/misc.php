@@ -6,7 +6,10 @@
 
     <div id="center-wrapper">
 
-        <?php get_header('Storm the Pixie'); ?>
+        <?php
+        getHeader();
+        getNav();
+        ?>
 
         <div class="container">
 
@@ -95,8 +98,7 @@
             </p>
 
             <div id="image">
-<!--                //TODO: fix link-->
-                <img src="includes/GAS.png">
+                <img src="src/includes/GAS.png">
             </div>
 
 
